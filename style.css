@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper{
+  height: 2000px;
+  width: 100vw;
+  background: linear-gradient(red, yellow);
+  padding: 10% 0 0 0;
+
+}
+.image{
+  width: 400px;
+  height: 400px;
+  background-image: url(./u_d0a8.jpg);
+  background-size: contain;
+  position: fixed;
+  right: 45%;
+  bottom: 45%;
+}
+
+.text{
+  color: #fff;
+  counter-reset: sectionCounter;
+}
+.text p{
+  counter-increment: sectionCounter;
+}
+.text p::before{
+  content: counter(sectionCounter) ". ";
+}
